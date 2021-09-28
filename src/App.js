@@ -1,23 +1,27 @@
-import logo from './logo.svg';
+
 import './App.css';
+import {HashRouter, Link, Switch, Route} from "react-router-dom";
+import side1 from "./side1";
+import side2 from "./side2";
+import {Button} from "react-bootstrap";
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <HashRouter>
+            <ul>
+                <li><Link to="/side1">Side 1</Link></li>
+                <li><Link to="/side2">Side 2</Link></li>
+                <Button id=onChange={()=>{
+                    document
+                }}>click me</Button>
+            </ul>
+            <Switch>
+                <Route path="/side1" component={side1} />
+                <Route path="/side2" component={side2} />
+            </Switch>
+        </HashRouter>
     </div>
   );
 }
