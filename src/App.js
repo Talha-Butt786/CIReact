@@ -3,7 +3,6 @@ import './App.css';
 import {HashRouter, Link, Switch, Route} from "react-router-dom";
 import side1 from "./side1";
 import side2 from "./side2";
-import {Button} from "react-bootstrap";
 
 
 function App() {
