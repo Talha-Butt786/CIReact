@@ -13,9 +13,6 @@ function App() {
             <ul>
                 <li><Link to="/side1">Side 1</Link></li>
                 <li><Link to="/side2">Side 2</Link></li>
-                <Button id=onChange={()=>{
-                    document
-                }}>click me</Button>
             </ul>
             <Switch>
                 <Route path="/side1" component={side1} />
